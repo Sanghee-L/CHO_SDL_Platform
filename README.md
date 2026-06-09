@@ -27,7 +27,29 @@ The platform was developed to address a common challenge in biologics developmen
 
 ## Platform Workflow
 ```
-Synthetic Clone Population             ↓ Feature Engineering             ↓ Predictive Scoring             ↓ Pareto Optimization             ↓ Digital Twin Simulation             ↓ Reinforcement Learning             ↓ Candidate Selection             ↓ Engineering Recommendation             ↓ Risk Assessment             ↓ Experimental Outcome Simulation             ↓ SDL Learning Loop             ↓ Executive Decision Platform 
+Synthetic Clone Population             
+            ↓ 
+Feature Engineering             
+            ↓ 
+Predictive Scoring             
+            ↓ 
+Pareto Optimization             
+            ↓ 
+Digital Twin Simulation             
+            ↓
+Reinforcement Learning             
+            ↓ 
+Candidate Selection             
+            ↓ 
+Engineering Recommendation             
+            ↓ 
+Risk Assessment             
+            ↓ 
+Experimental Outcome Simulation             
+            ↓ 
+SDL Learning Loop             
+            ↓ 
+Executive Decision Platform 
 ```
 ---
 

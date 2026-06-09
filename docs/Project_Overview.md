@@ -75,9 +75,31 @@ Continuously update platform knowledge using simulated experimental outcomes.
 ## Platform Architecture
 
 The current workflow integrates multiple computational modules:
-
-text Synthetic Clone Population             ↓ Feature Engineering             ↓ Predictive Scoring             ↓ Pareto Optimization             ↓ Digital Twin Simulation             ↓ Reinforcement Learning             ↓ Candidate Dashboard             ↓ Engineering Recommendation             ↓ Risk Assessment             ↓ Experimental Outcome Simulation             ↓ SDL Learning Loop             ↓ Executive Decision Platform 
-
+```
+Synthetic Clone Population             
+            ↓ 
+Feature Engineering             
+            ↓ 
+Predictive Scoring             
+            ↓ 
+Pareto Optimization             
+            ↓ 
+Digital Twin Simulation             
+            ↓ 
+Reinforcement Learning             
+            ↓ 
+Candidate Dashboard             
+            ↓ 
+Engineering Recommendation             
+            ↓ 
+Risk Assessment             
+            ↓ 
+Experimental Outcome Simulation             
+            ↓ 
+SDL Learning Loop             
+            ↓ 
+Executive Decision Platform 
+```
 ---
 
 ## Project Components
