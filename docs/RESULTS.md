@@ -21,7 +21,7 @@ The objective is to reduce experimental burden and identify high-value manufactu
 
 ## Clone Recommendation Distribution
 
-![Candidate Category Distribution](reports/screenshots/Candidate_Category_Distribution_notebook18.png)
+![Candidate Category Distribution](/Users/sang/Desktop/CLD_ML/Results screenshots for project v1/notebook18)
 
 The platform classified screened clones into four decision categories:
 
