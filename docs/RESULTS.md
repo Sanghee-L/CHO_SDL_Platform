@@ -21,7 +21,7 @@ The objective is to reduce experimental burden and identify high-value manufactu
 
 ## Clone Recommendation Distribution
 
-![Candidate Category Distribution](/Users/sang/Desktop/CLD_ML/Results screenshots for project v1/notebook18)
+![Candidate Category Distribution](../reports/screenshots/candidate_category_distribution.png)
 
 The platform classified screened clones into four decision categories:
 
@@ -45,7 +45,7 @@ This demonstrates early elimination of low-value candidates before expensive dow
 
 ## Candidate Funnel
 
-![Candidate Funnel](reports/screenshots/CLD_Candidate_Funnel_notebook18.png)
+![Candidate Funnel](../reports/screenshots/candidate_funnel.png)
 
 The funnel illustrates progressive reduction of experimental workload.
 
@@ -63,13 +63,35 @@ Final immediate advancement:
 
 The workflow dramatically reduces experimental burden while preserving promising candidates.
 
+### Experimental Burden Reduction
+
+Starting population:
+
+- 93 screened clones
+
+Retained after SDL screening:
+
+- 36 clones
+
+Immediate advancement candidates:
+
+- 3 clones
+
+Reduction in final advancement workload:
+
+- 96.8%
+
+This demonstrates how the SDL workflow can eliminate low-priority candidates before expensive process development, scale-up, analytical characterization, and manufacturing studies.
+
+Only 3 of 93 clones were recommended for immediate advancement, allowing experimental resources to be concentrated on the highest-value candidates.
+
 ---
 
 # 2. SDL Learning Portfolio
 
 ## SDL Experiment Selection
 
-![SDL Portfolio](reports/screenshots/SDL_Portfolio_Selection_notebook19.png)
+![SDL Portfolio](../reports/screenshots/sdl_portfolio.png)
 
 The SDL engine allocated resources across three learning strategies:
 
@@ -115,7 +137,7 @@ Examples:
 
 ## Titer Improvement
 
-![Titer](reports/screenshots/Titer_Before_vs_After_Engineering_notebook22.png)
+![Titer](../reports/screenshots/titer_improvement.png)
 
 Most engineered clones moved above the diagonal.
 
@@ -129,7 +151,7 @@ Interpretation:
 
 ## qP Improvement
 
-![qP](reports/screenshots/qP_Before_vs_After_Engineering_notebook22.png)
+![qP](../reports/screenshots/qp_improvement.png)
 
 qP improvements were observed across many clones.
 
@@ -142,7 +164,7 @@ Interpretation:
 
 ## Stability Improvement
 
-![Stability](reports/screenshots/Stability_Before_vs_After_Engineering_notebook22.png)
+![Stability](../reports/screenshots/stability_improvement.png)
 
 Many clones improved long-term expression stability.
 
@@ -155,7 +177,7 @@ Interpretation:
 
 ## Quality Improvement
 
-![Quality](reports/screenshots/Quality_Before_vs_After_Engineering_notebook22.png)
+![Quality](../reports/screenshots/quality_improvement.png)
 
 Several clones achieved improved quality metrics.
 
@@ -168,7 +190,7 @@ Interpretation:
 
 ## Engineering ROI
 
-![Engineering ROI](reports/screenshots/Engineering_ROI_Table_notebook22.png)
+![Engineering ROI](../reports/screenshots/engineering_roi.png)
 
 Highest-return interventions were identified.
 
@@ -201,7 +223,7 @@ Inputs include:
 
 ## Clone Archetype Classification
 
-![Clone Archetypes](reports/screenshots/Clone_Archetype_Distribution_notebook24.png)
+![Clone Archetypes](../reports/screenshots/clone_archetype_distribution.png)
 
 Clones were classified into archetypes:
 
@@ -229,7 +251,7 @@ Results:
 
 ## Top Manufacturing Candidates
 
-![Top Manufacturing Candidates](reports/screenshots/Top_Manufacturing_Candidates_Table_notebook24.png)
+![Top Manufacturing Candidates](../reports/screenshots/top_manufacturing_candidates.png)
 
 The final decision engine recommends:
 
