@@ -2,274 +2,381 @@
 
 ## Vision
 
-The long-term vision of this project is to build a Scientific Development Loop (SDL) platform for biologics development.
+The long-term goal of the CHO SDL Platform is to create a data-driven Self-Driving Laboratory (SDL) capable of continuously improving Cell Line Development (CLD) decisions through machine learning, digital twins, engineering simulation, and real experimental feedback.
 
-The platform combines:
+The platform follows a simple principle:
 
-- Clone screening
-- Multi-omics intelligence
-- Digital twins
-- Reinforcement learning
-- Cell engineering
-- Process optimization
-- Closed-loop learning
+> Every experiment should improve the model.  
+> Every model improvement should reduce future experiments.
 
-to reduce development timelines, experimental burden, and manufacturing risk.
-
-The current release represents the first prototype toward this goal.
+This roadmap outlines the planned evolution from a rule-based prototype to an autonomous SDL ecosystem.
 
 ---
 
-# Current State (V1)
+# V1 — SDL Prototype (Current)
 
-## SDL Prototype Platform
+## Objective
 
-Version 1 demonstrates an end-to-end computational workflow for CHO cell line development.
+Demonstrate an end-to-end SDL architecture for CHO Cell Line Development using synthetic data and simulated experimentation.
 
-Implemented capabilities:
+## Implemented Components
 
-- Random Rorest clone prediction models
-- Multi-objective clone screening
+### Clone Intelligence
+
+- Feature engineering
+- Random Forest predictive modeling
+- Multi-objective clone scoring
+- False-positive detection
+
+### Process Rescue
+
+- Rescue-aware screening
+- Clone × process optimization
+- Process-sensitive candidate identification
+
+### Quality & Biological Realism
+
 - Pareto optimization
-- Process-aware ranking
-- Multi-omics simulation
-- Digital twin modeling
-- Reinforcement learning policy optimization
-- Host cell engineering recommendation
-- Engineering risk assessment
-- Experimental outcome simulation
-- Closed-loop SDL learning
-- Executive clone intelligence platform
+- Glycosylation simulation
+- Biological calibration
+- Metabolic burden modeling
 
-Current decision framework:
+### Digital Twin
 
-- ML-generated clone performance scores
-- Rule-based executive decision engine
-- Human-interpretable advancement criteria
+- Multi-omics latent state representation
+- Dynamic state trajectories
+- State → action → reward framework
 
-Current limitations:
+### Reinforcement Learning
 
-- Synthetic data
+- Q-learning policy optimization
+- Rollout validation
+- Robustness testing
+
+### Engineering Simulation
+
+- Intervention recommendation
+- CRISPR target prioritization
+- Risk assessment
+- Outcome simulation
+
+### SDL Learning
+
+- Prediction error analysis
+- Knowledge updates
+- Closed-loop learning
+
+### Executive Intelligence
+
+- Clone archetype classification
+- Manufacturing candidate ranking
+- Decision support dashboard
+
+---
+
+## Current Limitations
+
+- Synthetic datasets
 - Rule-based decision logic
 - Simulated engineering outcomes
 - No wet-lab validation
-
-V1 serves as a proof-of-concept demonstrating the architecture of a future SDL platform.
-
----
-
-# Version 2 Roadmap
-
-## Real Data SDL Platform
-
-### Goal
-
-Transition from synthetic data to real CHO development datasets.
-
-Potential data sources:
-
-- Internal development programs
-- Academic collaborations
-- Biotech pilot studies
-- CDMO partnerships
-
-### New Models
-
-#### Random Forest
-
-Applications:
-
-- Clone ranking
-- Feature importance analysis
-- Early-stage success prediction
-
-#### XGBoost
-
-Applications:
-
-- High-performance clone scoring
-- Productivity prediction
-- Stability prediction
-
-#### Bayesian Models
-
-Applications:
-
-- Experimental uncertainty estimation
-- Confidence scoring
-- Risk-aware recommendations
-
-#### Survival Analysis
-
-Applications:
-
-- Expression stability prediction
-- Clone longevity prediction
-- Manufacturing failure risk estimation
-
-### Expected Outcome
-
-Move from:
-
-Rule-based decisions
-
-to:
-
-Data-driven decisions learned from experimental outcomes.
+- No real manufacturing data
 
 ---
 
-# Version 3 Roadmap
+# V2 — Data-Driven SDL
 
-## Multi-Omics Foundation Models
+## Objective
 
-### Goal
+Replace rule-based decisions with statistically learned decision systems trained on real Cell Line Development data.
 
-Understand the biological mechanisms driving clone success and failure.
+## Planned Capabilities
 
-Additional Data Modalities:
+### Real Experimental Data Integration
 
-- Transcriptomics
-- Proteomics
-- Metabolomics
-- Epigenomics
+Potential Sources:
+
+- Biotech partners
+- CDMOs
+- Public datasets
+- Internal pilot studies
+
+Examples:
+
+- Clone screening data
+- Titer measurements
+- Stability studies
+- Process development results
+
+---
+
+### Learned Decision Engine
+
+Current State:
+
+Rule-based thresholds
+
+Future State:
+
+Data-driven recommendations
+
+Potential Methods:
+
+- XGBoost
+- Random Forest benchmarking
+- Bayesian models
+- Ensemble learning
+
+---
+
+### Uncertainty-Aware Predictions
+
+Goals:
+
+- Confidence intervals
+- Prediction intervals
+- Risk-adjusted recommendations
+
+Potential Methods:
+
+- Bayesian modeling
+- Quantile regression forests
+- Conformal prediction
+
+---
+
+### Outcome Prediction Models
+
+Potential Models:
+
+- Survival analysis
+- Time-to-failure prediction
+- Long-term stability forecasting
+
+---
+
+### Data-Calibrated Digital Twin
+
+Current State:
+
+Synthetic simulator
+
+Future State:
+
+Experimentally calibrated simulator
+
+Goals:
+
+- Better prediction accuracy
+- Improved intervention recommendations
+- More realistic trajectory simulation
+
+---
+
+# V3 — Multi-Omics SDL
+
+## Objective
+
+Create biologically informed SDL systems using molecular measurements rather than only phenotypic metrics.
+
+## Planned Data Types
+
+### Transcriptomics
+
+Examples:
+
+- RNA-seq
+- Single-cell RNA-seq
+
+---
+
+### Epigenomics
+
+Examples:
+
 - ATAC-seq
-- Chromatin accessibility
-- Cell lineage information
+- Chromatin accessibility profiles
+
+---
+
+### Proteomics
+
+Examples:
+
+- Secretory pathway proteins
+- Stress-response proteins
+- Product quality regulators
+
+---
+
+### Metabolomics
+
+Examples:
+
+- Energy metabolism
+- Nutrient utilization
+- Metabolic burden indicators
+
+---
+
+## Planned Models
+
+### Foundation Models for Cell Biology
+
+Goal:
+
+Learn universal biological representations across cell lines and development programs.
+
+---
 
 ### Graph Neural Networks (GNN)
 
 Applications:
 
 - Gene regulatory networks
-- Pathway interaction modeling
-- Secretory network analysis
+- Pathway interaction networks
+- Cell-state transitions
 
-Frameworks:
+Potential Framework:
 
 - PyTorch
 - PyTorch Geometric
 
-### Transformer Models
+---
+
+### Transformer Architectures
 
 Applications:
 
-- Multi-omics representation learning
-- Biological state embeddings
-- Foundation models for cell development
-
-Frameworks:
-
-- PyTorch
-- HuggingFace Transformers
-
-### Expected Outcome
-
-Move from:
-
-"What happened?"
-
-to:
-
-"Why did it happen?"
-
-and
-
-"What will happen next?"
+- Multi-omics integration
+- Sequence-based representations
+- Temporal biological modeling
 
 ---
 
-# Version 4 Roadmap
+### Next-Generation Digital Twin
 
-## PAT-Enabled Autonomous SDL
+Goals:
 
-### Goal
+- Molecular-state tracking
+- Omics-informed intervention design
+- Mechanistic prediction
 
-Integrate real-time process monitoring and adaptive process control.
+---
 
-### Process Analytical Technology (PAT)
+# V4 — Autonomous SDL & PAT Integration
 
-Potential Signals:
+## Objective
+
+Create a real-time SDL platform capable of continuously monitoring, predicting, and optimizing bioprocess performance.
+
+## Process Analytical Technology (PAT)
+
+Potential Sensors:
 
 - Raman spectroscopy
-- Capacitance probes
-- Viable cell density
-- Glucose
-- Lactate
-- Dissolved oxygen
-- pH
-- Temperature
-
-### Reinforcement Learning Controller
+- Near-infrared spectroscopy
+- Biomass sensors
+- Metabolite analyzers
 
 Applications:
 
-- Feed optimization
-- Process control
-- Adaptive manufacturing strategies
+- Real-time state estimation
+- Online model updates
+- Adaptive control
 
-### Digital Twin Integration
+---
 
-Real-time process states will continuously update digital twin predictions.
+## Real-Time Digital Twin
 
-### Expected Outcome
+Goals:
 
-Move from:
+- Live process monitoring
+- Online state prediction
+- Dynamic intervention recommendations
 
-Offline optimization
+---
 
-to:
+## Autonomous Process Control
 
-Real-time optimization.
+Potential Applications:
+
+- Feeding optimization
+- Temperature optimization
+- Perfusion control
+- Media adjustment
+
+---
+
+## Human-in-the-Loop SDL
+
+Goal:
+
+Support scientists rather than replace them.
+
+The platform would function as an intelligent decision-support system capable of recommending experiments, predicting outcomes, and identifying risks while allowing experts to maintain final decision authority.
 
 ---
 
 # Long-Term Vision
 
-## Digital-First CDO Infrastructure
+The ultimate vision is a continuously learning Cell Line Development platform where:
+```
+Experimental Data
+    ↓
+Model Learning
+    ↓
+Digital Twin Update
+    ↓
+Decision Optimization
+    ↓
+New Experiments
+    ↓
+Improved Data
+```
+creating a self-improving development cycle.
 
-The ultimate vision is to create a digital-first Cell Development Organization (CDO) platform.
+The goal is not to replace scientists.
 
-The platform would integrate:
-
-- Clone screening
-- Multi-omics intelligence
-- Cell engineering
-- Digital twins
-- Process optimization
-- PAT systems
-- Autonomous learning
-
-within a single scientific decision engine.
-
-Future users could:
-
-- Identify high-value clones earlier
-- Eliminate false-positive candidates
-- Design engineering strategies
-- Optimize upstream processes
-- Continuously learn from experimental outcomes
-
-The long-term objective is to reduce:
-
-- Development time
-- Experimental burden
-- Manufacturing risk
-- Cost of biologics development
-
-while improving:
-
-- Productivity
-- Stability
-- Product quality
-- Decision confidence
+The goal is to help scientists make better decisions with fewer experiments, lower development costs, and faster timelines.
 
 ---
 
-## Guiding Principle
+# Roadmap Summary
 
-Every experiment should improve the model.
+### V1 — SDL Prototype
 
-Every model improvement should reduce future experiments.
+Synthetic data  
+Rule-based decisions  
+Digital twin  
+Reinforcement learning  
+Engineering simulation
 
-This feedback loop represents the core philosophy of the SDL platform.
+---
+
+### V2 — Data-Driven SDL
+
+Real CLD data  
+Learned decision engine  
+Uncertainty estimation  
+Predictive analytics
+
+---
+
+### V3 — Multi-Omics SDL
+
+RNA-seq  
+ATAC-seq  
+Proteomics  
+Metabolomics  
+Foundation models  
+Graph Neural Networks
+
+---
+
+### V4 — Autonomous SDL
+
+PAT integration  
+Real-time digital twins  
+Adaptive process control  
+Human-in-the-loop optimization

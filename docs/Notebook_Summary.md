@@ -2,462 +2,608 @@
 
 ## Overview
 
-The CHO SDL Platform was developed through 24 notebooks that progressively build an AI-guided decision-support system for Cell Line Development (CLD).
+The CHO SDL Platform V1 was developed as a prototype Self-Driving Laboratory (SDL) for Cell Line Development (CLD).
 
-Rather than treating each notebook as an independent analysis, the project follows a layered architecture that evolves from synthetic clone generation to executive decision support.
+The platform consists of 24 interconnected notebooks organized into eight architectural layers. Together they create an end-to-end workflow that transforms clone data into manufacturing recommendations while continuously learning from simulated experimental outcomes.
 
-This document summarizes the role of each notebook and how it contributes to the overall platform.
+Unlike conventional clone screening pipelines, the platform combines:
 
----
+- Machine learning
+- Multi-objective optimization
+- Process-aware rescue strategies
+- Digital twin simulation
+- Reinforcement learning
+- Host cell engineering
+- Closed-loop SDL learning
+- Executive decision intelligence
 
-# Phase 1 – Data Foundation
-
-## Notebook 01 – Synthetic Clone Population Generation
-
-### Purpose
-
-Generate a synthetic CHO clone population representing biological diversity.
-
-### Key Outputs
-
-- Clone population dataset
-- Productivity features
-- Quality features
-- Stability features
+The ultimate goal is to reduce experimental burden, improve decision quality, and identify manufacturable candidates earlier in development.
 
 ---
 
-## Notebook 02 – Exploratory Data Analysis
+# Layer 1 — Clone Intelligence (NB01–NB04)
 
-### Purpose
+## Purpose
 
-Understand clone distributions and biological variability.
+Transform raw clone information into actionable biological intelligence.
 
-### Key Outputs
+This layer establishes the foundation of the platform by generating predictive features, training machine learning models, and converting predictions into development decisions.
+
+---
+
+### NB01 – Exploratory Data Analysis
+
+Purpose:
+
+- Explore clone distributions
+- Validate synthetic population behavior
+- Compare biological ranges with literature expectations
+
+Key Outputs:
 
 - Distribution analysis
-- Correlation analysis
-- Data quality assessment
+- Data quality checks
+- Biological sanity validation
 
 ---
 
-## Notebook 03 – Feature Engineering
+### NB02 – Feature Engineering
 
-### Purpose
+Purpose:
 
-Create derived biological and manufacturing features.
+- Create predictive biological features
+- Construct productivity and stability indicators
+- Generate false-positive detection features
 
-### Key Outputs
+Key Outputs:
 
-- Engineered productivity metrics
-- Burden indicators
-- Composite biological features
-
----
-
-# Phase 2 – Clone Intelligence
-
-## Notebook 04 – Productivity Modeling
-
-### Purpose
-
-Estimate clone productivity potential.
-
-### Key Outputs
-
-- Productivity scores
-- Productivity ranking
+- Engineered features
+- qP proxy metrics
+- Stability indicators
+- False-positive flags
 
 ---
 
-## Notebook 05 – Quality Modeling
+### NB03 – Multi-Objective Clone Modeling
 
-### Purpose
+Purpose:
 
-Estimate product quality potential.
+- Predict future clone performance using machine learning
 
-### Key Outputs
+Methods:
 
-- Quality scores
-- Quality ranking
+- Random Forest
+- Multi-target prediction
+- SHAP interpretation
+- Spearman correlation analysis
 
----
+Key Outputs:
 
-## Notebook 06 – Stability Modeling
-
-### Purpose
-
-Estimate long-term clone stability.
-
-### Key Outputs
-
-- Stability scores
-- Stability ranking
+- Productivity prediction
+- Stability prediction
+- Aggregation prediction
+- Feature importance analysis
 
 ---
 
-## Notebook 07 – Cellular Burden Analysis
+### NB04 – Decision Engine & Validation
 
-### Purpose
+Purpose:
 
-Evaluate biological cost associated with productivity.
+- Convert model predictions into actionable clone decisions
 
-### Key Outputs
+Decision Modes:
 
-- Burden scores
-- Burden-risk assessment
+- Biosimilar
+- Novel biologic
+- ADC development
 
----
+Key Outputs:
 
-## Notebook 08 – Integrated Clone Scoring
-
-### Purpose
-
-Combine productivity, quality, stability, and burden.
-
-### Key Outputs
-
-- Composite clone score
-- Initial candidate ranking
+- Clone scoring framework
+- Decision categories
+- Candidate prioritization
 
 ---
 
-## Notebook 09 – Candidate Selection
+# Layer 2 — Process Rescue (NB05–NB07)
 
-### Purpose
+## Purpose
 
-Reduce the initial clone population into a manageable development portfolio.
+Traditional clone screening workflows often eliminate candidates that fail predefined productivity, quality, or stability thresholds.
 
-### Key Outputs
+However, poor performance may not always originate from intrinsic cellular limitations. In many cases, clone performance is strongly influenced by process conditions such as feeding strategy, media composition, temperature shifts, perfusion intensity, or nutrient availability.
 
-- Shortlisted clone candidates
+The Process Rescue layer was developed to identify clones that would normally be rejected but may become viable manufacturing candidates under alternative process conditions.
 
----
+This introduces the concept of process-rescuable clones:
 
-# Phase 3 – Multi-Objective Optimization
+> Clones that appear suboptimal under the current process but have the potential to achieve acceptable performance after process optimization.
 
-## Notebook 10 – Pareto Optimization
+Rather than asking:
 
-### Purpose
+> "Is this clone good enough?"
 
-Identify clones that balance multiple development objectives simultaneously.
+the platform asks:
 
-### Key Outputs
+> "Could this clone become valuable under a better process?"
 
-- Pareto-optimal clone portfolio
-- Multi-objective ranking
-
-### Importance
-
-One of the most important notebooks in the platform.
-
-It introduces balanced decision-making instead of optimizing a single metric.
+This approach reduces the risk of prematurely discarding potentially valuable manufacturing candidates.
 
 ---
 
-## Notebook 11 – Biological Calibration
+### NB05 – Process-Aware Rescue Simulation
 
-### Purpose
+Purpose:
 
-Evaluate whether selected clones remain biologically realistic.
+- Identify borderline clones
+- Estimate process-driven recovery potential
+- Quantify clone sensitivity to process changes
 
-### Key Outputs
+Key Outputs:
 
-- Biological plausibility assessment
-
----
-
-## Notebook 12 – Final Candidate Portfolio
-
-### Purpose
-
-Create the final candidate population for downstream digital twin modeling.
-
-### Key Outputs
-
-- Candidate clone portfolio
+- Rescue scores
+- Clone-specific process sensitivity profiles
+- Rescue candidate ranking
 
 ---
 
-# Phase 4 – Digital Twin Development
+### NB06 – Process-Aware Utility Optimization
 
-## Notebook 13 – Multi-Omics State Representation
+Purpose:
 
-### Purpose
+- Evaluate alternative process strategies
+- Quantify expected gains from process changes
+- Compare process-condition tradeoffs
 
-Represent hidden cellular states using synthetic multi-omics features.
+Key Outputs:
 
-### Key Outputs
-
-- Cellular state profiles
-- Omics-derived representations
-
----
-
-## Notebook 14 – Digital Twin Construction
-
-### Purpose
-
-Build a digital twin environment for clone trajectory simulation.
-
-### Key Outputs
-
-- State space model
-- Clone trajectory framework
-
-### Importance
-
-Forms the foundation for reinforcement learning.
+- Utility functions
+- Process-condition ranking
+- Pareto utility surfaces
 
 ---
 
-# Phase 5 – Reinforcement Learning
+### NB07 – Clone × Process Optimization
 
-## Notebook 15 – RL Policy Training
+Purpose:
 
-### Purpose
+- Jointly optimize clone characteristics and process conditions
 
-Train a reinforcement learning policy within the digital twin.
+Evaluated Conditions:
 
-### Key Outputs
+- Balanced feed
+- Rich media
+- Perfusion
+- Nutrient limitation
+- Temperature shift
+- Intensified feeding
 
-- Learned RL policy
-- Q-value estimates
+Key Outputs:
 
-### Importance
-
-Introduces adaptive decision-making.
-
----
-
-## Notebook 16 – Policy Rollout Evaluation
-
-### Purpose
-
-Compare RL-driven strategies against baseline approaches.
-
-### Key Outputs
-
-- RL rollout simulations
-- Controller comparison
+- Action recommendation table
+- Process-condition ranking
+- Uncertainty-aware recommendations
 
 ---
 
-## Notebook 17 – Robustness & Stress Testing
+### Why Process Rescue Matters
 
-### Purpose
+The platform does not only identify good clones.
 
-Evaluate policy stability under uncertainty and perturbation.
+It identifies clones worth rescuing.
 
-### Key Outputs
+This capability helps reduce false-negative decisions and bridges the gap between clone screening and process development.
+
+---
+
+# Layer 3 — Quality, Pareto & Biological Calibration (NB08–NB12)
+
+## Purpose
+
+Ensure candidate selection remains biologically realistic while balancing competing objectives.
+
+---
+
+### NB08 – NISTCHO-Based Calibration
+
+Purpose:
+
+- Benchmark simulated clones against biological reference ranges
+
+Key Outputs:
+
+- Calibration metrics
+- Reference alignment
+
+---
+
+### NB09 – Glycosylation & Quality Coupling
+
+Purpose:
+
+- Explore relationships between productivity and quality attributes
+
+Key Outputs:
+
+- Glyco-state variables
+- Quality coupling analysis
+
+---
+
+### NB10 – Multi-Objective Pareto Optimization
+
+Purpose:
+
+- Identify candidates that optimally balance multiple objectives
+
+Objectives:
+
+- Productivity
+- Quality
+- Stability
+- Process rescue potential
+- Biological risk
+
+Key Outputs:
+
+- Pareto front
+- Candidate ranking
+
+---
+
+### NB11 – Biological Calibration (Legacy)
+
+Purpose:
+
+- Early biological calibration prototype
+
+Status:
+
+Retained for project history.
+
+Superseded by NB11v2.
+
+---
+
+### NB11v2 – Structured Biological Calibration
+
+Purpose:
+
+- Improve biological realism through reference-informed calibration
+
+Key Outputs:
+
+- Calibration categories
+- Normalized biological distance metrics
+- Recommendation refinement
+
+---
+
+### NB12 – Metabolic Burden Framework
+
+Purpose:
+
+- Quantify hidden cellular stress and manufacturing risk
+
+Key Outputs:
+
+- Burden classification
+- Scale-up risk indicators
+- Robustness assessment
+
+---
+
+# Layer 4 — CHO Digital Twin (NB13–NB14v2)
+
+## Purpose
+
+Create a virtual representation of clone behavior across time and process conditions.
+
+---
+
+### NB13 – Multi-Omics Latent State Model
+
+Purpose:
+
+- Represent hidden biological states using synthetic omics information
+
+Omics Layers:
+
+- Transcriptomics
+- Proteomics
+- Metabolomics
+
+Key Outputs:
+
+- Latent state vectors
+- Hidden cellular state representation
+
+---
+
+### NB14 – Dynamic Trajectory Prototype (Legacy)
+
+Purpose:
+
+- Initial digital twin implementation
+
+Status:
+
+Retained for project history.
+
+Superseded by NB14v2.
+
+---
+
+### NB14v2 – Dynamic State Trajectory Engine
+
+Purpose:
+
+- Simulate clone evolution through time
+
+Framework:
+
+State → Action → Next State → Reward
+
+Key Outputs:
+
+- Dynamic trajectories
+- Intervention effects
+- Temporal clone evolution
+
+This notebook forms the foundation of the digital twin environment.
+
+---
+
+# Layer 5 — Reinforcement Learning (NB15–NB17)
+
+## Purpose
+
+Optimize decision-making inside the digital twin environment.
+
+---
+
+### NB15 – RL Policy Optimization
+
+Purpose:
+
+- Train reinforcement learning agents
+
+Method:
+
+- Q-learning
+
+Key Outputs:
+
+- Learned policies
+- Action-value estimates
+
+---
+
+### NB16 – RL Rollout Evaluation
+
+Purpose:
+
+- Compare RL recommendations against baseline approaches
+
+Key Outputs:
+
+- Controller comparisons
+- Rollout simulations
+
+---
+
+### NB17 – RL Robustness Testing
+
+Purpose:
+
+- Evaluate policy stability under uncertainty
+
+Stress Scenarios:
+
+- High burden
+- Low productivity
+- Quality drift
+- Noisy environments
+- High-risk clones
+- Deployment scenarios
+
+Key Outputs:
 
 - Robustness scores
-- Stress-test results
-
-### Importance
-
-Demonstrates whether learned policies remain useful outside ideal conditions.
+- Deployment readiness assessment
 
 ---
 
-# Phase 6 – Executive Screening
+# Layer 6 — Executive Screening & SDL Planning (NB18–NB19)
 
-## Notebook 18 – Candidate Dashboard
+## Purpose
 
-### Purpose
-
-Integrate biological, engineering, and RL information into an executive screening framework.
-
-### Key Outputs
-
-- Clone ranking dashboard
-- Candidate categories
-- Advance / Monitor / Engineer / Terminate decisions
-
-### Importance
-
-Transforms technical outputs into actionable decisions.
+Translate technical predictions into experimental decisions.
 
 ---
 
-# Phase 7 – Self-Driving Laboratory (SDL)
+### NB18 – Executive Dashboard
 
-## Notebook 19 – SDL Experiment Planning
+Decision Categories:
 
-### Purpose
+- Advance
+- Advance with Monitoring
+- Engineer
+- Terminate
 
-Determine which experiments should be performed next.
+Key Outputs:
 
-### Key Outputs
-
-- SDL experiment portfolio
-- Exploration vs exploitation strategy
-
-### Importance
-
-Introduces active learning concepts into the platform.
+- Candidate ranking
+- Executive screening dashboard
 
 ---
 
-# Phase 8 – Engineering Platform
+### NB19 – SDL Experiment Planning
 
-## Notebook 20 – Engineering Recommendation Engine
+Learning Strategies:
 
-### Purpose
+- Exploit
+- Explore
+- Engineer
 
-Recommend interventions designed to improve clone performance.
+Key Outputs:
 
-### Key Outputs
+- SDL portfolio
+- Experimental batch recommendations
 
-- Engineering opportunities
+This notebook introduces active-learning concepts into the platform.
+
+---
+
+# Layer 7 — Host Cell Engineering Platform (NB20–NB22)
+
+## Purpose
+
+Simulate engineering interventions before wet-lab execution.
+
+---
+
+### NB20 – Engineering Recommendation Engine
+
+Example Targets:
+
+- XBP1
+- PDI
+- B4GALT1
+- ST6GAL1
+- LDHA
+
+Key Outputs:
+
+- Engineering recommendations
 - Predicted intervention effects
 
-### Importance
-
-Connects biological bottlenecks to engineering actions.
-
 ---
 
-## Notebook 21 – Risk-Aware Engineering Assessment
+### NB21 – Engineering Risk Assessment
 
-### Purpose
+Purpose:
 
-Evaluate intervention feasibility and potential risks.
+- Estimate intervention feasibility and risk
 
-### Key Outputs
+Key Outputs:
 
 - Success probability
-- Off-target risk estimates
-- Expected benefit scores
-
-### Importance
-
-Adds realism to engineering recommendations.
+- Off-target risk
+- Expected net benefit
 
 ---
 
-## Notebook 22 – Experimental Outcome Simulation
+### NB22 – Experimental Outcome Simulation
 
-### Purpose
+Predicted Outcomes:
 
-Simulate expected engineering outcomes.
+- Titer
+- qP
+- Stability
+- Quality
+- ROI
 
-### Key Outputs
+Key Outputs:
 
-- Predicted titer gains
-- Predicted quality gains
-- Predicted stability gains
-- Engineering ROI
-
-### Importance
-
-Estimates value before conducting expensive experiments.
+- Before vs after comparisons
+- Engineering ROI estimates
 
 ---
 
-# Phase 9 – Closed-Loop Learning
+# Layer 8 — SDL Learning & Executive Clone Intelligence (NB23–NB24)
 
-## Notebook 23 – SDL Learning Engine
+## Purpose
 
-### Purpose
+Create a closed-loop learning system that continuously improves recommendations.
 
-Learn from simulated experimental outcomes and update platform knowledge.
+---
 
-### Key Outputs
+### NB23 – SDL Learning Engine
 
-- Learning database
+Functions:
+
+- Prediction error analysis
 - Knowledge updates
-- Prediction calibration
+- Learning database generation
 
-### Importance
+Key Outputs:
 
-Introduces continuous improvement into the platform.
+- SDL feedback engine
+- Knowledge calibration
+
+Implements the Design–Build–Test–Learn (DBTL) cycle.
 
 ---
 
-# Phase 10 – Executive Clone Intelligence Platform
+### NB24 – Executive Clone Intelligence Platform
 
-## Notebook 24 – Executive Decision Platform
+Final Archetypes:
 
-### Purpose
-
-Provide final clone recommendations for scientists and decision-makers.
-
-### Key Outputs
-
-- Clone archetypes
-- Process recommendations
-- Manufacturing candidate ranking
-- SDL impact assessment
-
-### Clone Archetypes
-
-#### SUPER
+### SUPER
 
 High productivity, quality, and stability.
 
-#### AGGRESSIVE
+### AGGRESSIVE
 
-High productivity with elevated development risk.
+Potential false-positive candidates requiring monitoring.
 
-#### DEVELOPMENT
+### DEVELOPMENT
 
-Promising clones requiring additional optimization.
+Promising candidates requiring engineering or process optimization.
 
-#### REJECT
+### REJECT
 
 Low-priority candidates.
 
-### Importance
+Key Outputs:
 
-Represents the final integration layer of Project V1.
+- Clone archetypes
+- Process recommendations
+- Engineering recommendations
+- Manufacturing candidate ranking
 
 ---
 
-# Project Evolution
-
-The project progresses through the following stages:
+# Platform Workflow
 ```
-Synthetic Data         
-        ↓ 
-Clone Intelligence         
-        ↓ 
-Pareto Optimization         
-        ↓ 
-Digital Twin         
-        ↓ 
-Reinforcement Learning         
-        ↓ 
-Executive Screening         
-        ↓ 
-SDL Planning         
-        ↓ 
-Engineering Recommendation         
-        ↓ 
-Risk Assessment         
-        ↓ 
-Outcome Simulation         
-        ↓ 
-Closed-Loop Learning         
-        ↓ 
-Executive Decision Platform 
+Clone Intelligence
+        ↓
+Process Rescue
+        ↓
+Quality & Pareto Optimization
+        ↓
+CHO Digital Twin
+        ↓
+Reinforcement Learning
+        ↓
+Executive Screening
+        ↓
+SDL Planning
+        ↓
+Host Cell Engineering
+        ↓
+Outcome Simulation
+        ↓
+SDL Learning
+        ↓
+Executive Clone Intelligence
 ```
 ---
 
-# Key Differentiators
+# Most Innovative Components
 
-The most distinctive notebooks within the project are:
+The components that most strongly differentiate the platform are:
 
-- Notebook 10 – Pareto Optimization
-- Notebook 14 – Digital Twin Construction
-- Notebook 15 – Reinforcement Learning
-- Notebook 17 – Robustness Testing
-- Notebook 18 – Executive Screening
-- Notebook 19 – SDL Planning
-- Notebook 20 – Engineering Recommendation
-- Notebook 21 – Risk Assessment
-- Notebook 22 – Experimental Outcome Simulation
-- Notebook 23 – SDL Learning
-- Notebook 24 – Executive Clone Intelligence Platform
+- Process Rescue Framework (NB05–NB07)
+- Multi-Objective Pareto Optimization (NB10)
+- CHO Digital Twin (NB13–NB14v2)
+- Reinforcement Learning Optimization (NB15–NB17)
+- SDL Experiment Planning (NB19)
+- Engineering Recommendation Engine (NB20–NB21)
+- Experimental Outcome Simulator (NB22)
+- SDL Learning Engine (NB23)
+- Executive Clone Intelligence Platform (NB24)
 
-Together, these notebooks transform a clone screening workflow into a prototype self-driving laboratory platform for Cell Line Development.
+Together these notebooks transform a conventional clone-screening workflow into a prototype AI-guided Self-Driving Laboratory for Cell Line Development.

@@ -21,7 +21,7 @@ The objective is to reduce experimental burden and identify high-value manufactu
 
 ## Clone Recommendation Distribution
 
-![Candidate Category Distribution](../reports/screenshots/candidate_category_distribution.png)
+![Candidate Category Distribution](reports/screenshots/candidate_category_distribution.png)
 
 The platform classified screened clones into four decision categories:
 
@@ -45,7 +45,7 @@ This demonstrates early elimination of low-value candidates before expensive dow
 
 ## Candidate Funnel
 
-![Candidate Funnel](../reports/screenshots/candidate_funnel.png)
+![Candidate Funnel](reports/screenshots/candidate_funnel.png)
 
 The funnel illustrates progressive reduction of experimental workload.
 
@@ -91,7 +91,7 @@ Only 3 of 93 clones were recommended for immediate advancement, allowing experim
 
 ## SDL Experiment Selection
 
-![SDL Portfolio](../reports/screenshots/sdl_portfolio.png)
+![SDL Portfolio](reports/screenshots/sdl_portfolio.png)
 
 The SDL engine allocated resources across three learning strategies:
 
@@ -137,7 +137,7 @@ Examples:
 
 ## Titer Improvement
 
-![Titer](../reports/screenshots/titer_improvement.png)
+![Titer](reports/screenshots/titer_improvement.png)
 
 Most engineered clones moved above the diagonal.
 
@@ -151,7 +151,7 @@ Interpretation:
 
 ## qP Improvement
 
-![qP](../reports/screenshots/qp_improvement.png)
+![qP](reports/screenshots/qp_improvement.png)
 
 qP improvements were observed across many clones.
 
@@ -164,7 +164,7 @@ Interpretation:
 
 ## Stability Improvement
 
-![Stability](../reports/screenshots/stability_improvement.png)
+![Stability](reports/screenshots/stability_improvement.png)
 
 Many clones improved long-term expression stability.
 
@@ -177,7 +177,7 @@ Interpretation:
 
 ## Quality Improvement
 
-![Quality](../reports/screenshots/quality_improvement.png)
+![Quality](reports/screenshots/quality_improvement.png)
 
 Several clones achieved improved quality metrics.
 
@@ -190,7 +190,7 @@ Interpretation:
 
 ## Engineering ROI
 
-![Engineering ROI](../reports/screenshots/engineering_roi.png)
+![Engineering ROI](reports/screenshots/engineering_roi.png)
 
 Highest-return interventions were identified.
 
@@ -223,7 +223,7 @@ Inputs include:
 
 ## Clone Archetype Classification
 
-![Clone Archetypes](../reports/screenshots/clone_archetype_distribution.png)
+![Clone Archetypes](reports/screenshots/clone_archetype_distribution.png)
 
 Clones were classified into archetypes:
 
@@ -251,7 +251,7 @@ Results:
 
 ## Top Manufacturing Candidates
 
-![Top Manufacturing Candidates](../reports/screenshots/top_manufacturing_candidates.png)
+![Top Manufacturing Candidates](reports/screenshots/top_manufacturing_candidates.png)
 
 The final decision engine recommends:
 
