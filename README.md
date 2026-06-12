@@ -218,13 +218,13 @@ pip install -r requirements.txt
 
 Synthetic CLD datasets can be regenerated locally using:
 ```bash
-python scripts/generate_synthetic_cld.py
+python3 scripts/generate_synthetic_cld.py
 ```
 By default, this generates the legacy scenario.
 
 To generate the optimized scenario:
 ```bash
-python scripts/generate_synthetic_cld.py --scenario optimized
+python3 scripts/generate_synthetic_cld.py --scenario optimized
 ```
 
 Generated files are written to:
@@ -249,7 +249,7 @@ The repository includes a lightweight workflow guide that demonstrates the inten
 
 Run:
 ```bash
-python examples/run_v1_pipeline.py
+python3 examples/run_v1_pipeline.py
 ```
 This script serves as a roadmap for navigating the notebook-based workflow and illustrates how the platform components connect across the SDL pipeline.
 

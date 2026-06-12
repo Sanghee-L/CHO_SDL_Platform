@@ -11,7 +11,7 @@ requires-python = ">=3.11"
 license = { text = "Apache-2.0" }
 
 authors = [
-  { name = "Sanghee Lee", email = "tkdgmlgyfl@gmail.com" }
+  { name = "Sanghee Lee" }
 ]
 
 keywords = [
@@ -22,7 +22,9 @@ keywords = [
   "reinforcement-learning",
   "machine-learning",
   "self-driving-lab",
-  "synthetic-data"
+  "synthetic-data",
+  "biologics",
+  "scientific-machine-learning"
 ]
 
 classifiers = [
