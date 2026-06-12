@@ -17,3 +17,7 @@ __pycache__/
 
 # VS Code settings
 .vscode/
+
+*.egg-info/
+build/
+dist/

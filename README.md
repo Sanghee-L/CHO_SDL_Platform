@@ -23,6 +23,18 @@ Common challenges include:
 
 ---
 
+## Project Objectives
+
+The platform focuses on five core objectives:
+
+1. Prioritize promising CHO clones
+2. Detect false-positive candidates early
+3. Recommend engineering interventions
+4. Reduce experimental burden
+5. Enable continuous SDL learning
+
+---
+
 ## Proposed Solution
 
 The CHO SDL platform combines:
@@ -68,11 +80,11 @@ This reduction demonstrates how SDL-guided clone prioritization can decrease unn
 
 
 Additional capabilities demonstrated:
- - Multi-objective clone ranking
- - Engineering intervention simulation
- - SDL portfolio selection
- - Executive clone intelligence dashboard
- - Closed-loop knowledge feedback
+ * Multi-objective clone ranking
+ * Engineering intervention simulation
+ * SDL portfolio selection
+ * Executive clone intelligence dashboard
+ * Closed-loop knowledge feedback
 
 
 ## SDL Closed-Loop Architecture
@@ -99,31 +111,202 @@ The SDL engine continuously updates knowledge generated throughout the developme
 | SDL Learning Engine | Knowledge accumulation |
 | Executive Platform | Decision support |
 
-## Project Objectives
+---
 
-The platform focuses on five core objectives:
+## Repository Structure
+``` 
+CHO_SDL_PLATFORM/
+├── data/
+│   ├── sql/
+│   └── synthetic/
+├── docs/
+├── examples/
+├── notebooks/
+├── reports/
+│   ├── figures/
+│   └── screenshots/
+├── scripts/
+├── src/
+│   └── cho_sdl/
+├── README.md
+├── requirements.txt
+├── LICENSE
+└── .gitignore
+```
 
-1. Prioritize promising CHO clones
-2. Detect false-positive candidates early
-3. Recommend engineering interventions
-4. Reduce experimental burden
-5. Enable continuous SDL learning
+---
+
+## Data Model
+
+The synthetic CLD dataset is organized using a relational schema designed to mimic a typical Cell Line Development (CLD) workflow.
+
+### Entity Relationship Diagram (ERD)
+
+Figure 3. Synthetic CLD database schema used throughout the CHO SDL platform.
+
+![ER_Diagram](reports/figures/ERdiagram_for_CLD_v3.png)
+
+### Core Entities
+| Table | Description |
+|-------|-------------|
+| product | Therapeutic product being expressed (e.g., monoclonal antibody) |
+| host_cell | Host cell background (e.g., CHO-K1, CHO-DG44) |
+| vector | Expression vector metadata |
+| cell_line | Transfected parental cell line |
+| clone | Isolated production clones |
+| passage | Longitudinal passage history for each clone |
+| process_condition | Culture conditions applied at each passage |
+| assay_result | Experimental measurements (titer, VCD, viability, aggregation, copy number, etc.) |
+| batch | Assay execution batches used to introduce realistic batch effects |
+| stability_test | Productivity stability labels derived from early vs. late passages |
+
+### Synthetic Biology Design Principles
+The synthetic dataset was designed to reproduce several common biological phenomena observed during CHO cell line development:
+* Clone productivity follows a right-skewed distribution where a small number of clones become high producers.
+* Productivity decays across passages according to clone-specific stability.
+* High expression burden can suppress growth and viability during early passages.
+* Growth and viability can partially recover as productivity declines over time.
+* Product quality is influenced by both intrinsic clone quality and expression-related stress.
+* Batch-level effects introduce realistic experimental variability.
+* Platform-specific effects simulate differences between legacy and optimized CLD technologies.
+* Rare clone subpopulations can exhibit jackpot or false-positive behaviors to challenge screening algorithms.
+
+### Hidden Ground Truth
+To support benchmarking and model validation, hidden latent variables are generated for every clone:
+
+* Productivity potential (P)
+* Stability potential (S)
+* Quality potential (Q)
+
+These latent variables are exported separately as validation datasets and are intentionally excluded from SQLite database tables to prevent machine-learning leakage.
+
+Additional hidden variables are also generated for:
+
+* Process-response behavior
+* Stress adaptation
+* Perfusion rescue potential
+* Feed responsiveness
+* Glycosylation tendencies
+* Product quality consistency
+
+These hidden factors support future digital twin, process optimization, and reinforcement learning workflows within the CHO SDL Platform.
+
+
+---
+
+## Environment
+
+This project was developed using:
+ - Python 3.11.15
+ - Jupyter Notebook
+ - numpy
+ - pandas
+ - scikit-learn
+ - matplotlib
+ - scipy
+ - shap
+ - openpyxl
+
+Install dependencies:
+```
+pip install -r requirements.txt
+```
+
+---
+
+## Generating Synthetic Data
+
+Synthetic CLD datasets can be regenerated locally using:
+```bash
+python scripts/generate_synthetic_cld.py
+```
+By default, this generates the legacy scenario.
+
+To generate the optimized scenario:
+```bash
+python scripts/generate_synthetic_cld.py --scenario optimized
+```
+
+Generated files are written to:
+```
+data/synthetic/raw/
+```
+
+Example generated files:
+```
+cld_5000clones_legacy.db
+batch_effects_truths_5000_legacy.csv
+clone_latent_truths_5000_legacy.csv
+```
+
+SQLite database files are not tracked in Git because they may exceed GitHub file-size limits.
+
+---
+
+## Running the V1 Workflow Guide
+
+The repository includes a lightweight workflow guide that demonstrates the intended execution sequence of the V1 prototype.
+
+Run:
+```bash
+python examples/run_v1_pipeline.py
+```
+This script serves as a roadmap for navigating the notebook-based workflow and illustrates how the platform components connect across the SDL pipeline.
+
+Typical stages include:
+
+1. Synthetic dataset generation
+2. Data quality inspection
+3. Early-passage feature engineering
+4. Stability prediction
+5. Clone prioritization
+6. Pareto optimization
+7. Digital twin simulation
+8. Reinforcement learning optimization
+9. Engineering recommendation
+10. SDL portfolio selection
+11. Executive decision support
+
+Primary analyses are implemented in the notebooks/ directory.
+
+Generated figures, reports, and outputs can be found in:
+
+reports/
+
+while notebook-based analyses are located in:
+
+notebooks/
 
 ---
 
 ## Current Status
 
-Version: V1 Prototype Complete
+Version: v1.0.0 Prototype Complete
 
 Implemented Components:
 
 - 24 end-to-end notebooks
+- Synthetic CLD data generator
+- SQL schema
 - Multi-stage clone screening workflow
 - Digital twin framework
 - Reinforcement learning optimization
-- Host cell engineering simulation
-- SDL learning engine
+- Engineering recommendation engine
+- Closed-loop SDL workflow
 - Executive decision dashboard
+
+---
+
+## Documentation
+
+Additional documentation can be found in the docs/ directory:
+
+- PROJECT_OVERVIEW.md
+- ARCHITECTURE.md
+- NOTEBOOK_SUMMARY.md
+- RESULTS.md
+- ROADMAP.md
+- FUTURE_WORK.md
 
 ---
 
@@ -162,18 +345,6 @@ Implemented Components:
 - Real-time digital twins
 - Online learning system
 - Autonomous experiment recommendation
-
----
-
-## Documentation
-
-Additional documentation can be found in the docs/ directory:
-
-- PROJECT_OVERVIEW.md
-- ARCHITECTURE.md
-- NOTEBOOK_SUMMARY.md
-- RESULTS.md
-- ROADMAP.md
 
 ---
 

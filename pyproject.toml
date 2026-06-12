@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cho-sdl-platform"
+version = "1.0.0"
+description = "Self-Driving Laboratory (SDL) platform for CHO Cell Line Development"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+
+authors = [
+  { name = "Sanghee Lee", email = "tkdgmlgyfl@gmail.com" }
+]
+
+keywords = [
+  "cho",
+  "cell-line-development",
+  "bioprocessing",
+  "digital-twin",
+  "reinforcement-learning",
+  "machine-learning",
+  "self-driving-lab",
+  "synthetic-data"
+]
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
