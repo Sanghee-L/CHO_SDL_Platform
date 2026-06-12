@@ -127,7 +127,7 @@ CHO_SDL_PLATFORM/
 │   └── screenshots/
 ├── scripts/
 ├── src/
-│   └── cho_sdl/
+│   └── cho_sdl
 ├── README.md
 ├── requirements.txt
 ├── LICENSE
